@@ -14,11 +14,18 @@
             <div id="deviceready" class="blink">
                 <p class="event listening">Connecting to Device</p>
                 <p class="event received">Device is Ready</p>
+				<br />
+				<div id="welcomeDiv"></div>
+				<script>
+				var string = device.uuid;
+				document.getElementById('welcomeDiv').innerHTML = string;
+				</script>
             </div>
         </div>
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
 		<script type="text/javascript" src="js/PushNotification.js"></script>
+		<script type="text/javascript" src="js/device.js"></script>
 		<script>
 	// Setup push notifications:
 	try
